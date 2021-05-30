@@ -1,11 +1,12 @@
 import React from 'react';
-import {Quotes} from './components';
-
+import { Navigation } from './components';
+import Routes from './routes/Routes';
 
 function App() {
   return (
     <div className="App">
-      <Quotes />
+      <Routes />
+      <Navigation />
     </div>
   );
 }
