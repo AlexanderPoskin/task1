@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Home, QuotesPage } from './index';
+import { Home, QuotesPage, UsersPage, UsersFavoritePage } from './index';
 import { Switch, Route } from 'react-router-dom';
 
 class Routes extends Component {
@@ -11,6 +11,12 @@ class Routes extends Component {
         </Route>
         <Route path="/quotes">
           <QuotesPage />
+        </Route>
+        <Route path="/users">
+          <UsersPage />
+        </Route>
+        <Route path="/users/favorite">
+          <UsersFavoritePage />
         </Route>
       </Switch>
     );

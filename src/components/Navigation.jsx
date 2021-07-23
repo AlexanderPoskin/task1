@@ -12,6 +12,12 @@ class Navigation extends Component {
           <li>
             <Link to="/quotes">Quotes Page</Link>
           </li>
+          <li>
+            <Link to="/users">Users Page</Link>
+          </li>
+          <li>
+            <Link to="/users/favorite">Favorite Users Page</Link>
+          </li>
         </ul>
       </div>
     );
