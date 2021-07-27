@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loadUsers } from '../reducers/users';
+<<<<<<< HEAD
 import UserCard from './UserCard';
 import './components.css';
 
@@ -11,6 +12,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = {
   loadUsers,
 };
+=======
+>>>>>>> 2c431caa264332ae14085f8ef82b39ae0d9bbb0a
 
 class Users extends Component {
   componentDidMount() {
@@ -18,6 +21,7 @@ class Users extends Component {
   }
 
   render() {
+<<<<<<< HEAD
     const { listUsers } = this.props;
 
     return (
@@ -40,3 +44,12 @@ class Users extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Users);
+=======
+    return <div>
+
+    </div>;
+  }
+}
+
+export default connect(null, { loadUsers })(Users);
+>>>>>>> 2c431caa264332ae14085f8ef82b39ae0d9bbb0a
