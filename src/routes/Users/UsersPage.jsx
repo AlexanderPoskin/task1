@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Users from '../../components/Users';
+import Users from '../../components/Users/Users';
 
 class UsersPage extends Component {
   render() {

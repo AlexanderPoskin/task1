@@ -1,5 +1,4 @@
 import React from 'react';
-import './components.css';
 import faker from 'faker';
 
 const UserCard = ({ name, username, website }) => {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UsersFavorite from '../../components/UsersFavorite';
+import UsersFavorite from '../../components/Users/UsersFavorite';
 
 class UsersFavoritePage extends Component {
   render() {
