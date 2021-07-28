@@ -1,5 +1,6 @@
 import React from 'react';
 import './components.css';
+import faker from 'faker';
 
 const UserCard = ({ name, username, website }) => {
   return (
@@ -11,6 +12,10 @@ const UserCard = ({ name, username, website }) => {
           {website}
         </a>
       </div>
+      <div
+        className="user_avatar"
+        style={{ backgroundImage: `url(${faker.image.avatar()})` }}
+      ></div>
     </div>
   );
 };

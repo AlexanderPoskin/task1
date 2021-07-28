@@ -2,13 +2,9 @@
   cursor: pointer;
 }
 
-a:link {
-  color: green;
-}
-
 .users {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   padding-top: 50px;
   width: 100%;
@@ -17,13 +13,14 @@ a:link {
 .user_card {
   border: solid;
   border-radius: 8px;
-  border-width: 2px;
+  border-width: 3px;
   border-color: gray;
-  margin: 25px;
-  min-width: 300px;
+  margin: 40px;
+  margin-top: 60px;
+  min-width: 260px;
   max-width: 400px;
   height: 200px;
-  background-color: lightgrey;
+  background-color: cornsilk;
 }
 
 .user_card_name,
@@ -34,11 +31,26 @@ a:link {
 
 .user_card_name {
   padding-top: 70px;
+  font-size: 25px;
+  font-style: italic;
 }
 
 .user_card_username {
   padding: 20px;
 }
 
-.user_card_website {
+.user_avatar {
+  border: solid;
+  border-radius: 50%;
+  border-width: 1px;
+  max-width: 120px;
+  height: 120px;
+  margin-top: -250px;
+  margin-left: 55px;
+  padding-left: 25px;
+  background-image: url();
+}
+
+.avatar {
+  margin: 501px;
 }

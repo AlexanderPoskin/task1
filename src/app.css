@@ -1,9 +1,13 @@
 .App {
-  padding: 30px;
   font-size: 20px;
+  margin: 40px;
 }
 
-a {
+a:link {
   text-decoration: none;
+  color: blue;
+}
+
+a:visited {
   color: blue;
 }
