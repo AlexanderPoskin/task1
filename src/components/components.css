@@ -1,27 +1,44 @@
+* {
+  cursor: pointer;
+}
+
+a:link {
+  color: green;
+}
+
 .users {
-  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  width: 100%;
 }
 
 .user_card {
-  display: flex;
-  max-width: 300px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
   border: solid;
   border-radius: 8px;
   border-width: 2px;
+  border-color: gray;
   margin: 25px;
+  min-width: 300px;
+  max-width: 400px;
+  height: 200px;
+  background-color: lightgrey;
 }
 
-.user_list {
-
+.user_card_name,
+.user_card_username,
+.user_card_website {
+  text-align: center;
 }
 
 .user_card_name {
+  padding-top: 70px;
+}
 
+.user_card_username {
+  padding: 20px;
 }
 
 .user_card_website {
-
 }

@@ -24,18 +24,16 @@ class Users extends Component {
 
     return (
       <div className="users">
-        <div className="users_list">
-          {listUsers.map((c) => {
-            return (
-              <UserCard
-                name={c.name}
-                username={c.username}
-                website={c.website}
-                key={c.id}
-              />
-            );
-          })}
-        </div>
+        {listUsers.map((c) => {
+          return (
+            <UserCard
+              name={c.name}
+              username={c.username}
+              website={c.website}
+              key={c.id}
+            />
+          );
+        })}
       </div>
     );
   }
