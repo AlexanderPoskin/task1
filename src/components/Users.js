@@ -4,6 +4,8 @@ import { loadUsers } from '../reducers/users';
 import UserCard from './UserCard';
 import './components.css';
 
+// Ключ: значение
+// Достаем самое необходимое из стора, а ключ - это название пропса который попадёт в твой компонент
 const mapStateToProps = (state) => ({
   listUsers: state.users.list,
 });
@@ -30,7 +32,6 @@ class Users extends Component {
                 username={c.username}
                 website={c.website}
                 key={c.id}
-
               />
             );
           })}
