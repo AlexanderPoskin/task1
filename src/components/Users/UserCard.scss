@@ -1,0 +1,39 @@
+.user-card {
+  border: solid;
+  border-radius: 8px;
+  border-width: 3px;
+  border-color: gray;
+  margin: 40px;
+  margin-top: 60px;
+  min-width: 260px;
+  max-width: 400px;
+  height: 200px;
+  background-color: cornsilk;
+
+  &__name,
+  &__username,
+  &__website {
+    text-align: center;
+  }
+
+  &__name {
+    padding-top: 70px;
+    font-size: 25px;
+    font-style: italic;
+  }
+
+  &__username {
+    padding: 20px;
+  }
+
+  &__avatar {
+    border: solid;
+    border-radius: 50%;
+    border-width: 1px;
+    max-width: 120px;
+    height: 120px;
+    margin-top: -250px;
+    margin-left: 55px;
+    padding-left: 25px;
+  }
+}
