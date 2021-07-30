@@ -8,4 +8,9 @@
   flex-wrap: wrap;
   padding-top: 50px;
   width: 100%;
+
+  &__loading {
+    font-style: italic;
+    font-size: 30px;
+  }
 }
