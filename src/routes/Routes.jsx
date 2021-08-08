@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Home, QuotesPage, UsersPage, UsersFavoritePage } from './index';
 import { Switch, Route } from 'react-router-dom';
+import UserDetails from './UserDetails/UserDetails';
 
 class Routes extends Component {
   render() {
@@ -9,14 +10,17 @@ class Routes extends Component {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/quotes">
+        <Route exact path="/quotes">
           <QuotesPage />
         </Route>
-        <Route path="/users">
+        <Route exact path="/users">
           <UsersPage />
         </Route>
-        <Route path="/users/favorite">
+        <Route exact path="/users/favorite">
           <UsersFavoritePage />
+        </Route>
+        <Route exact path="/users/:id">
+          <UserDetails />
         </Route>
       </Switch>
     );

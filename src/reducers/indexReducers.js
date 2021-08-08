@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import users from './users';
 import favoriteUsers from './favoriteUsers';
-import detailsUsers from './detailsUsers';
+import detailsUser from './detailsUser';
 
 export default combineReducers({
   users,
   favoriteUsers,
-  detailsUsers,
+  detailsUser,
 });

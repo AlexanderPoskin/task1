@@ -34,6 +34,7 @@ class Users extends Component {
                 username={c.username}
                 website={c.website}
                 key={c.id}
+                id={c.id}
               />
             );
           })
