@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Home, QuotesPage, UsersPage, UsersFavoritePage } from './index';
+import { Home, QuotesPage, UsersPage } from './index';
 import { Switch, Route } from 'react-router-dom';
 import UserDetails from './UserDetails/UserDetails';
 
@@ -15,9 +15,6 @@ class Routes extends Component {
         </Route>
         <Route exact path="/users">
           <UsersPage />
-        </Route>
-        <Route exact path="/users/favorite">
-          <UsersFavoritePage />
         </Route>
         <Route exact path="/users/:id">
           <UserDetails />

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Quotes.scss';
 
 class Quotes extends Component {
   constructor(props) {
@@ -31,8 +32,8 @@ class Quotes extends Component {
       return <p>Loading ...</p>;
     }
     return (
-      <div>
-        <form className="form" onSubmit={(e) => e.preventDefault()}>
+      <div className="quotes-page">
+        <form onSubmit={(e) => e.preventDefault()}>
           <button type="button" onClick={this.handleClick}>
             Load Quote
           </button>

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import {UserDetails as UserDetailsComponent} from '../../components/Users/UserDetails';
+import { UserDetails as UserDetailsComponent } from '../../components';
 
 class UserDetails extends Component {
   render() {
-        return (
+    return (
       <div>
-        <UserDetailsComponent/>
+        <UserDetailsComponent />
       </div>
     );
   }

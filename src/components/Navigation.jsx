@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './Navigation.scss';
 
 class Navigation extends Component {
   render() {
     return (
-      <div>
+      <div className="navigation">
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -14,9 +15,6 @@ class Navigation extends Component {
           </li>
           <li>
             <Link to="/users">Users Page</Link>
-          </li>
-          <li>
-            <Link to="/users/favorite">Favorite Users Page</Link>
           </li>
         </ul>
       </div>
