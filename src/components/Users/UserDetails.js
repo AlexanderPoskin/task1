@@ -20,7 +20,7 @@ class UserDetails extends Component {
   }
 
   render() {
-    const { userDetails } = this.props;
+    const { userDetails, loadingDetails } = this.props;
 
     return (
       <div className="user-details">

@@ -34,7 +34,11 @@ class Quotes extends Component {
     return (
       <div className="quotes-page">
         <form onSubmit={(e) => e.preventDefault()}>
-          <button type="button" onClick={this.handleClick}>
+          <button
+            className="quotes-page__button"
+            type="button"
+            onClick={this.handleClick}
+          >
             Load Quote
           </button>
         </form>

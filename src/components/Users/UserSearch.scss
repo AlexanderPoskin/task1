@@ -1,0 +1,12 @@
+.user-search {
+  display: flex;
+  justify-content: center;
+
+  &__button {
+    font-size: 20px;
+  }
+
+  &__input {
+    min-width: 200px;
+  }
+}
