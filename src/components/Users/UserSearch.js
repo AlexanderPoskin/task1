@@ -1,24 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './UserSearch.scss';
-import { loadSearched } from '../../reducers/users';
+import { useDispatch } from 'react-redux';
+import { setSearch } from '../../reducers/users';
 
-const inputHandler = (event) => {
-  console.log(event.target.value);
+const UserSearch = () => {
+  const dispatch = useDispatch();
+  const inputHandler = (e) => {
+    dispatch(setSearch({ searched: e.target.value }));
+  };
+
+  return (
+    <form onSubmit={(e) => e.preventDefault()} className="user-search">
+      <input
+        className="user-search__input"
+        type="text"
+        onChange={inputHandler}
+      />
+    </form>
+  );
 };
-
-class UserSearch extends Component {
-  render() {
-    return (
-      <div className="user-search">
-        <input
-          className="user-search__input"
-          type="text"
-          onChange={inputHandler}
-        />
-        <button className="user-search__button">Search</button>
-      </div>
-    );
-  }
-}
 
 export default UserSearch;

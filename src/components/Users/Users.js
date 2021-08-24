@@ -6,8 +6,6 @@ import UserCard from './UserCard';
 import './Users.scss';
 import cx from 'classnames';
 
-// Ключ: значение
-// Достаем самое необходимое из стора, а ключ - это название пропса который попадёт в твой компонент
 const mapStateToProps = (state) => ({
   listUsers: state.users.list,
   loadingUsers: state.users.loading,

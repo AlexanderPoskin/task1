@@ -4,7 +4,7 @@ export const ACTIONS_TYPES = {
   LOAD: `${STATE_KEY}/LOAD`,
   LOAD_SUCCESS: `${STATE_KEY}/LOAD_SUCCESS`,
   LOAD_FAIL: `${STATE_KEY}/LOAD_FAIL`,
-  LOAD_SEARCHED: `${STATE_KEY}/LOAD_FAIL`,
+  SET_SEARCH: `${STATE_KEY}/SET_SEARCH`,
 };
 
 export const initialState = {
@@ -37,7 +37,7 @@ export default function reducer(state = initialState, action) {
         loading: false,
         loaded: false,
       };
-    case ACTIONS_TYPES.LOAD_SEARCHED:
+    case ACTIONS_TYPES.SET_SEARCH:
       return {
         ...state,
         searched: payload.searched,
@@ -61,18 +61,10 @@ export function loadUsers() {
     },
   };
 }
-export function loadSearched({ name, username }) {
+
+export function setSearch(payload) {
   return {
-    types: [
-      ACTIONS_TYPES.LOAD,
-      ACTIONS_TYPES.LOAD_SUCCESS,
-      ACTIONS_TYPES.LOAD_FAIL,
-      ACTIONS_TYPES.LOAD_SEARCHED,
-    ],
-    payload: {
-      request: {
-        url: `/users`,
-      },
-    },
+    type: ACTIONS_TYPES.SET_SEARCH,
+    payload,
   };
 }
