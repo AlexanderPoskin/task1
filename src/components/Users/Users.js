@@ -9,6 +9,7 @@ import cx from 'classnames';
 const mapStateToProps = (state) => ({
   listUsers: state.users.list,
   loadingUsers: state.users.loading,
+  searchedData: state.users.searched,
 });
 
 const mapDispatchToProps = {
@@ -21,14 +22,19 @@ class Users extends Component {
   }
 
   render() {
-    const { listUsers, loadingUsers } = this.props;
+    const { listUsers, loadingUsers, searchedData } = this.props;
 
+    const filterData = listUsers.filter(
+      (item) =>
+        item.name.toLowerCase().includes(searchedData) ||
+        item.username.toLowerCase().includes(searchedData)
+    );
     return (
       <div>
         <UserSearch />
         <div className={cx('users', { 'users--is-loading': loadingUsers })}>
           {!loadingUsers ? (
-            listUsers.map((c) => {
+            filterData.map((c) => {
               return (
                 <UserCard
                   name={c.name}
