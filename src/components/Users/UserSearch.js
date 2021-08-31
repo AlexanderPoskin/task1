@@ -25,7 +25,7 @@ const UserSearch = () => {
         placeholder="Enter name or username"
         onChange={inputHandler}
       />
-      <button type="reset" disabled={!searched} onClick={clearSearch}>
+      <button type="reset" onClick={clearSearch}>
         X
       </button>
     </form>
@@ -33,3 +33,5 @@ const UserSearch = () => {
 };
 
 export default UserSearch;
+
+// disabled={!searched}
