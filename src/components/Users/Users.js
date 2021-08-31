@@ -21,6 +21,7 @@ class Users extends Component {
     this.props.loadUsers();
   }
 
+
   render() {
     const { listUsers, loadingUsers, searchedData } = this.props;
 
@@ -29,6 +30,7 @@ class Users extends Component {
         item.name.toLowerCase().includes(searchedData) ||
         item.username.toLowerCase().includes(searchedData)
     );
+
     return (
       <div>
         <UserSearch />
