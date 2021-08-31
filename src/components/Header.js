@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { showMenu } from '../reducers/menu';
+import { showMenu, closeMenu } from '../reducers/menu';
 import Menu from './Menu';
 import './Header.scss';
 
 const Header = () => {
+  const [buttonName, newButtonName] = useState(false);
   const isOpenMenu = useSelector((state) => state.menu.isOpenMenu);
   const dispatch = useDispatch();
   const menuHandler = () => {
-    dispatch(showMenu());
+    if (isOpenMenu) {
+      dispatch(closeMenu());
+    } else dispatch(showMenu());
+    newButtonName(!buttonName);
   };
 
   console.log(menuHandler);
@@ -16,9 +20,9 @@ const Header = () => {
   return (
     <div className="header">
       <button onClick={menuHandler} className="header__menu">
-        Menu
+      {buttonName ? 'Close menu' : 'Menu'}
       </button>
-      <div>{isOpenMenu ? <Menu /> : ''}</div>
+      {isOpenMenu ? <Menu /> : ''}
     </div>
   );
 };

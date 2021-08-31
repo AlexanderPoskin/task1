@@ -5,7 +5,7 @@ import Routes from '../routes/Routes';
 class Menu extends Component {
   render() {
     return (
-      <div>
+      <div className="transition">
         <Navigation />
         <Routes />
       </div>
