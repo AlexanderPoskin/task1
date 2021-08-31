@@ -33,5 +33,3 @@ const UserSearch = () => {
 };
 
 export default UserSearch;
-
-// disabled={!searched}
